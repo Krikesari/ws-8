@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert boxes</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">Click to get your wecome message</button>
+    <button onclick="confirmed()">Click for Confirmation</button>
+    <button onclick="promptsaid()">get a prompt</button>
+<p id="demo"></p>
+    <p id="demoprompt"></p>
+
+    
+    <script>
+        function myFunction() {
+            alert("Hey welcome to my website!");
+        }
+        function confirmed() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You confirmed!";
+            } else {
+                txt = "No confirmation";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+        function promptsaid() {
+            let text;
+            let person = prompt("Please enter your name:", "Mr. Harry Potter");
+            if (person == null || person == "") {
+                text = "User cancelled the prompt.";
+            } else {
+                text = "Hey" + person + "! Howz Life?";
+            }
+            document.getElementById("demoprompt").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
